@@ -8,3 +8,7 @@ script = ExtResource("1_acyul")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
 texture = ExtResource("1_vkdja")
+
+[node name="PlayerImage2" type="Sprite2D" parent="."]
+position = Vector2(145, 130)
+texture = ExtResource("1_vkdja")
