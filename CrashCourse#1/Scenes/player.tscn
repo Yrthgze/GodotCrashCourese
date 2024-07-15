@@ -3,12 +3,11 @@
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_acyul"]
 [ext_resource type="Texture2D" uid="uid://r0ic7c1pw2ug" path="res://kenney_space-shooter-redux/PNG/playerShip1_red.png" id="1_vkdja"]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_acyul")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
 texture = ExtResource("1_vkdja")
 
-[node name="PlayerImage2" type="Sprite2D" parent="."]
-position = Vector2(145, 130)
-texture = ExtResource("1_vkdja")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(7, -36, 11, -15, 35, 2, 47, -6, 47, 22, 6, 37, -6, 36, -45, 22, -48, -5, -36, 0, -13, -13, -8, -39)
