@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2bdim0jap4ia"]
+[gd_scene load_steps=8 format=3 uid="uid://c2bdim0jap4ia"]
 
 [ext_resource type="PackedScene" uid="uid://cbm33s2g6slvb" path="res://Scenes/player.tscn" id="1_ostsi"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_vj4op"]
 [ext_resource type="Texture2D" uid="uid://ds7d4lhfqqbif" path="res://kenney_space-shooter-redux/Backgrounds/darkPurple.png" id="1_yelfq"]
-[ext_resource type="PackedScene" uid="uid://d17pg0xweqvq5" path="res://Scenes/meteor.tscn" id="3_wpdov"]
 [ext_resource type="Script" path="res://Scenes/MainTimer.gd" id="4_ityqm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7bb0"]
@@ -23,9 +22,9 @@ scale = Vector2(5.65, 3.93)
 texture = ExtResource("1_yelfq")
 
 [node name="Player" parent="." instance=ExtResource("1_ostsi")]
-position = Vector2(64, 165)
+position = Vector2(505, 213)
 
-[node name="Meteor" parent="." instance=ExtResource("3_wpdov")]
+[node name="Meteors" type="Node2D" parent="."]
 position = Vector2(403, 126)
 
 [node name="Borders" type="Node2D" parent="."]
@@ -57,12 +56,10 @@ scale = Vector2(28.6795, 0.0722505)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/BottomWall"]
 position = Vector2(-0.343032, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rtptk")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="MeteorTimer" type="Timer" parent="."]
 autostart = true
 script = ExtResource("4_ityqm")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
