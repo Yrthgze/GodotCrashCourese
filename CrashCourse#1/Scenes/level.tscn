@@ -31,12 +31,14 @@ position = Vector2(1318, 360)
 scale = Vector2(-5.184, -44.581)
 
 [node name="RightWall" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/RightWall"]
 shape = SubResource("RectangleShape2D_i7bb0")
 
 [node name="LeftWall" type="StaticBody2D" parent="Borders"]
 position = Vector2(261.381, -0.0672939)
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/LeftWall"]
 shape = SubResource("RectangleShape2D_i7bb0")
@@ -44,6 +46,7 @@ shape = SubResource("RectangleShape2D_i7bb0")
 [node name="TopWall" type="StaticBody2D" parent="Borders"]
 position = Vector2(139.082, 8.63596)
 scale = Vector2(-17.7545, -0.0838856)
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/TopWall"]
 position = Vector2(0.325947, -1.60441)
@@ -52,12 +55,14 @@ shape = SubResource("RectangleShape2D_741jl")
 [node name="BottomWall" type="StaticBody2D" parent="Borders"]
 position = Vector2(138.696, -8.56867)
 scale = Vector2(28.6795, 0.0722505)
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/BottomWall"]
 position = Vector2(-0.343032, 0)
 shape = SubResource("RectangleShape2D_rtptk")
 
 [node name="MeteorTimer" type="Timer" parent="."]
+wait_time = 0.503
 autostart = true
 script = ExtResource("4_ityqm")
 

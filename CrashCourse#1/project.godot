@@ -43,6 +43,13 @@ down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Meteor"
+2d_physics/layer_3="Walls"
+2d_physics/layer_4="Laser"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
