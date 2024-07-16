@@ -11,7 +11,7 @@ func _ready():
 	laser_list = $Lasers
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_meteor_timer_timeout():

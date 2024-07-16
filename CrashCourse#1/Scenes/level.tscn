@@ -1,9 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2bdim0jap4ia"]
+[gd_scene load_steps=13 format=3 uid="uid://c2bdim0jap4ia"]
 
 [ext_resource type="PackedScene" uid="uid://cbm33s2g6slvb" path="res://Scenes/player.tscn" id="1_ostsi"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_vj4op"]
 [ext_resource type="Texture2D" uid="uid://ds7d4lhfqqbif" path="res://kenney_space-shooter-redux/Backgrounds/darkPurple.png" id="1_yelfq"]
 [ext_resource type="Script" path="res://Scenes/MainTimer.gd" id="4_ityqm"]
+[ext_resource type="Texture2D" uid="uid://dtaux2x8bm0oc" path="res://kenney_space-shooter-redux/PNG/Effects/star1.png" id="5_ap0nj"]
+[ext_resource type="Texture2D" uid="uid://c7iss256fwdca" path="res://kenney_space-shooter-redux/PNG/Effects/star2.png" id="6_1onp5"]
+[ext_resource type="Script" path="res://Scenes/Star.gd" id="6_ee2f4"]
+[ext_resource type="Texture2D" uid="uid://7qnyryvcrq40" path="res://kenney_space-shooter-redux/PNG/Effects/star3.png" id="7_copic"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b38ce"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ap0nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1onp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_copic")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7bb0"]
 
@@ -20,6 +41,209 @@ script = ExtResource("1_vj4op")
 position = Vector2(573, 279)
 scale = Vector2(5.65, 3.93)
 texture = ExtResource("1_yelfq")
+
+[node name="Stars" type="Node2D" parent="."]
+
+[node name="Star" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.780254
+script = ExtResource("6_ee2f4")
+
+[node name="Star20" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star21" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star22" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star23" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star24" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star25" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star26" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star27" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star28" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star29" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star30" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star31" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star32" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.89156
+script = ExtResource("6_ee2f4")
+
+[node name="Star12" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.416624
+script = ExtResource("6_ee2f4")
+
+[node name="Star13" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.416624
+script = ExtResource("6_ee2f4")
+
+[node name="Star14" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.416624
+script = ExtResource("6_ee2f4")
+
+[node name="Star15" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.416624
+script = ExtResource("6_ee2f4")
+
+[node name="Star16" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.416624
+script = ExtResource("6_ee2f4")
+
+[node name="Star17" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.416624
+script = ExtResource("6_ee2f4")
+
+[node name="Star18" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.416624
+script = ExtResource("6_ee2f4")
+
+[node name="Star19" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.416624
+script = ExtResource("6_ee2f4")
+
+[node name="Star2" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(736, 181)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star3" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star4" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star5" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star6" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star7" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star8" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star9" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star10" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame = 2
+frame_progress = 1.0
+script = ExtResource("6_ee2f4")
+
+[node name="Star11" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(159, 90)
+sprite_frames = SubResource("SpriteFrames_b38ce")
+frame_progress = 0.267869
+script = ExtResource("6_ee2f4")
 
 [node name="Player" parent="." instance=ExtResource("1_ostsi")]
 position = Vector2(505, 213)
