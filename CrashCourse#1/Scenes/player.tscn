@@ -12,3 +12,12 @@ texture = ExtResource("1_vkdja")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(7, -36, 11, -15, 35, 2, 47, -6, 47, 22, 6, 37, -6, 36, -45, 22, -48, -5, -36, 0, -13, -13, -8, -39)
+
+[node name="LaserStartPos" type="Marker2D" parent="."]
+position = Vector2(0, -62)
+gizmo_extents = 20.8
+
+[node name="LaserTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]
