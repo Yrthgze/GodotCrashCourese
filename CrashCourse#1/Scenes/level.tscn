@@ -25,7 +25,6 @@ texture = ExtResource("1_yelfq")
 position = Vector2(505, 213)
 
 [node name="Meteors" type="Node2D" parent="."]
-position = Vector2(403, 126)
 
 [node name="Borders" type="Node2D" parent="."]
 position = Vector2(1318, 360)
