@@ -6,6 +6,8 @@ var speed = rng.randi_range(10, 400)
 var rotation_speed = rng.randf_range(-0.1, 0.1)
 var direction_change = rng.randf_range(-0.5, 0.5)
 
+signal collision
+
 func select_random_sprite():
 	var base_path = "res://kenney_space-shooter-redux/PNG/Meteors/meteor"
 	var meteorColor = meteorColors[rng.randi_range(0, meteorColors.size() - 1)]
@@ -27,5 +29,4 @@ func _process(delta):
 	rotation += rotation_speed
 	
 func _on_body_entered(body):
-	print("Collide with ")
-	print(body)
+	collision.emit()
