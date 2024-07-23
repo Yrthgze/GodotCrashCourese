@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2bdim0jap4ia"]
+[gd_scene load_steps=14 format=3 uid="uid://c2bdim0jap4ia"]
 
 [ext_resource type="PackedScene" uid="uid://cbm33s2g6slvb" path="res://Scenes/player.tscn" id="1_ostsi"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_vj4op"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c7iss256fwdca" path="res://kenney_space-shooter-redux/PNG/Effects/star2.png" id="6_1onp5"]
 [ext_resource type="Script" path="res://Scenes/Star.gd" id="6_ee2f4"]
 [ext_resource type="Texture2D" uid="uid://7qnyryvcrq40" path="res://kenney_space-shooter-redux/PNG/Effects/star3.png" id="7_copic"]
+[ext_resource type="PackedScene" uid="uid://de1srgrpeoiv3" path="res://Scenes/ui.tscn" id="9_b8hdo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b38ce"]
 animations = [{
@@ -41,6 +42,7 @@ script = ExtResource("1_vj4op")
 position = Vector2(573, 279)
 scale = Vector2(5.65, 3.93)
 texture = ExtResource("1_yelfq")
+metadata/_edit_lock_ = true
 
 [node name="Stars" type="Node2D" parent="."]
 
@@ -291,6 +293,8 @@ script = ExtResource("4_ityqm")
 [node name="Lasers" type="Node2D" parent="."]
 
 [node name="Meteors" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("9_b8hdo")]
 
 [connection signal="Laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
