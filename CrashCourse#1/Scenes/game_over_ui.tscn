@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://4xkptdty5ym8"]
+[gd_scene load_steps=3 format=3 uid="uid://4xkptdty5ym8"]
 
+[ext_resource type="Script" path="res://Scenes/game_over_ui.gd" id="1_pvopl"]
 [ext_resource type="FontFile" uid="uid://dh4l4fteo2ukx" path="res://kenney_space-shooter-redux/Bonus/kenvector_future.ttf" id="1_qcdod"]
 
 [node name="GameOverUI" type="CanvasLayer"]
+script = ExtResource("1_pvopl")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -4.0

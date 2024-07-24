@@ -5,17 +5,12 @@ var laser_scene: PackedScene = load("res://Scenes/laser.tscn")
 var meteor_list = ""
 var laser_list = ""
 var laser_ready = true
-
 var health:int = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	meteor_list = $Meteors
 	laser_list = $Lasers
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
 
 func _on_meteor_timer_timeout():
 	var new_meteor = meteor_scene.instantiate()
@@ -25,7 +20,7 @@ func _on_meteor_timer_timeout():
 
 func _manage_health():
 	if health <= 0:
-		print("game over")
+		get_tree().change_scene_to_file("res://Scenes/game_over_ui.tscn")
 
 func _on_meteor_collision():
 	health -= 1

@@ -63,8 +63,3 @@ stretch_mode = 2
 layout_mode = 2
 texture = ExtResource("2_b0685")
 stretch_mode = 2
-
-[node name="TextureRect6" type="TextureRect" parent="MarginContainer2/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_b0685")
-stretch_mode = 2
