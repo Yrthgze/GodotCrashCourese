@@ -1,10 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://4xkptdty5ym8"]
+[gd_scene load_steps=4 format=3 uid="uid://4xkptdty5ym8"]
 
 [ext_resource type="Script" path="res://Scenes/game_over_ui.gd" id="1_pvopl"]
 [ext_resource type="FontFile" uid="uid://dh4l4fteo2ukx" path="res://kenney_space-shooter-redux/Bonus/kenvector_future.ttf" id="1_qcdod"]
+[ext_resource type="PackedScene" uid="uid://c2bdim0jap4ia" path="res://Scenes/level.tscn" id="2_lbmx8"]
 
 [node name="GameOverUI" type="CanvasLayer"]
 script = ExtResource("1_pvopl")
+level_scene = ExtResource("2_lbmx8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -4.0
