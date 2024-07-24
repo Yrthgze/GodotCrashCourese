@@ -10,6 +10,7 @@ func _ready():
 
 func shoot():
 	Laser.emit($LaserStartPos.global_position)
+	$LaserSound.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

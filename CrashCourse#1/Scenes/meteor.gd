@@ -5,6 +5,7 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var speed = rng.randi_range(10, 400)
 var rotation_speed = rng.randf_range(-0.1, 0.1)
 var direction_change = rng.randf_range(-0.5, 0.5)
+var can_collide = true
 
 signal collision
 
@@ -29,9 +30,15 @@ func _process(delta):
 	rotation += rotation_speed
 	
 func _on_body_entered(_body):
-	collision.emit()
-
+	if can_collide:
+		collision.emit()
+		$MeteorCollideShip.play()
+	
 #laser enter
 func _on_area_entered(area):
 	area.queue_free()
+	can_collide = false
+	$MeteorCollideLaser.play()
+	$Sprite2D.hide()
+	await get_tree().create_timer(1).timeout
 	queue_free()

@@ -11,6 +11,7 @@ var health:int = 5
 func _ready():
 	meteor_list = $Meteors
 	laser_list = $Lasers
+	$ReadyAudio.play()
 
 func _on_meteor_timer_timeout():
 	var new_meteor = meteor_scene.instantiate()
@@ -21,6 +22,8 @@ func _on_meteor_timer_timeout():
 func _manage_health():
 	if health <= 0:
 		get_tree().change_scene_to_file("res://Scenes/game_over_ui.tscn")
+	elif  health == 1:
+		$ShieldDown.play()
 
 func _on_meteor_collision():
 	health -= 1

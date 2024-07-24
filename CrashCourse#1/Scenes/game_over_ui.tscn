@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://4xkptdty5ym8"]
+[gd_scene load_steps=5 format=3 uid="uid://4xkptdty5ym8"]
 
 [ext_resource type="Script" path="res://Scenes/game_over_ui.gd" id="1_pvopl"]
 [ext_resource type="FontFile" uid="uid://dh4l4fteo2ukx" path="res://kenney_space-shooter-redux/Bonus/kenvector_future.ttf" id="1_qcdod"]
 [ext_resource type="PackedScene" uid="uid://c2bdim0jap4ia" path="res://Scenes/level.tscn" id="2_lbmx8"]
+[ext_resource type="AudioStream" uid="uid://myvwnqrlnh80" path="res://kenney_space-shooter-redux/Bonus/sfx_lose.ogg" id="4_85pgg"]
 
 [node name="GameOverUI" type="CanvasLayer"]
 script = ExtResource("1_pvopl")
@@ -66,3 +67,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_qcdod")
 theme_override_font_sizes/font_size = 20
 text = "Space to start again"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_85pgg")

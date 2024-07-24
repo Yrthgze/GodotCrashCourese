@@ -1,11 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbm33s2g6slvb"]
+[gd_scene load_steps=12 format=3 uid="uid://cbm33s2g6slvb"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_acyul"]
 [ext_resource type="Texture2D" uid="uid://r0ic7c1pw2ug" path="res://kenney_space-shooter-redux/PNG/playerShip1_red.png" id="1_vkdja"]
+[ext_resource type="AudioStream" uid="uid://bg8kkpkesu5v6" path="res://kenney_space-shooter-redux/Bonus/sfx_laser1.ogg" id="3_k0fn5"]
+
+[sub_resource type="Gradient" id="Gradient_hf48m"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tqe3q"]
+gradient = SubResource("Gradient_hf48m")
+
+[sub_resource type="Gradient" id="Gradient_8bcny"]
+colors = PackedColorArray(0.52549, 0, 0, 1, 0.909804, 0.733333, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_waw24"]
+gradient = SubResource("Gradient_8bcny")
+
+[sub_resource type="CurveTexture" id="CurveTexture_c7keh"]
+
+[sub_resource type="Curve" id="Curve_30y4y"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.802005, 0.44535), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_kpw8e"]
+curve = SubResource("Curve_30y4y")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gnua2"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 12.42
+gravity = Vector3(0, 20, 0)
+scale_min = 5.0
+scale_max = 5.0
+scale_curve = SubResource("CurveTexture_kpw8e")
+color = Color(1, 0.172549, 0.12549, 1)
+color_ramp = SubResource("GradientTexture1D_waw24")
+color_initial_ramp = SubResource("GradientTexture1D_tqe3q")
+emission_curve = SubResource("CurveTexture_c7keh")
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_acyul")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, 38)
+process_material = SubResource("ParticleProcessMaterial_gnua2")
+lifetime = 0.1
+speed_scale = 2.0
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
 texture = ExtResource("1_vkdja")
@@ -19,5 +59,8 @@ gizmo_extents = 20.8
 
 [node name="LaserTimer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k0fn5")
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

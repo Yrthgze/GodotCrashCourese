@@ -4,7 +4,8 @@ extends CanvasLayer
 
 func _ready():
 	$CenterContainer/VBoxContainer/Score.text = "Score: " + str(Global.score)
-
+	$AudioStreamPlayer2D.play()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func restart_game():
 	get_tree().change_scene_to_packed(level_scene)
