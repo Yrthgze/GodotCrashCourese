@@ -28,5 +28,10 @@ func _process(delta):
 	position += Vector2(direction_change, 1) * speed * delta
 	rotation += rotation_speed
 	
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	collision.emit()
+
+#laser enter
+func _on_area_entered(area):
+	area.queue_free()
+	queue_free()
